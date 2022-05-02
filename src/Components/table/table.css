@@ -1,0 +1,30 @@
+.table-container{
+    overflow: auto;
+}
+
+table {
+    box-shadow: 0 0 20px #222;
+    margin: 0 auto;
+    background: #fff;
+    border-spacing: 0;
+    width: 1120px;
+}
+
+td,
+th {
+    padding: 5px;
+}
+
+thead {
+    background: #89c4f4;
+    color: #fff;
+    text-align: left;
+}
+
+tr:nth-child(even) {
+    background: #e4f1fe;
+}
+
+.edit, .erase{
+    cursor: pointer;
+}

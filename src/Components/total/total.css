@@ -1,0 +1,35 @@
+.total{
+    margin: 30px 0;
+}
+
+p{
+    font-weight: bold;
+}
+
+.total-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin: 0 20px;
+    color: #fff;
+}
+
+.total-container > div{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.total-container > div:first-child{
+    background: green;
+}
+.total-container > div:nth-child(2){
+    background: red;
+}
+.total-container > div:last-child{
+    background: blue;
+}

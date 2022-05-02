@@ -1,18 +1,14 @@
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { Api } from '../../Context/Api'
 import Input from '../input/Input'
 import './table.css'
 
 const Table = () => {
 
-    const { array, setArray, json, filterAr } = useContext(Api)
+    const { setArray, json, filterAr } = useContext(Api)
     const [open, setOpen] = useState(false)
     const [index, setIndex] = useState('')
     const [inputs, setInputs] = useState({});
-
-    useEffect(() => {
-       
-    }, [filterAr])
 
     const handleChange = ({ target }) => {
         const name = target.name

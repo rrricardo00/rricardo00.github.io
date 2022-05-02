@@ -7,7 +7,7 @@ import './filter.css'
 const Filter = () => {
 
     const { array, setFilter  } = useContext(Api)
-    const [ar, setAr] = useState()
+    const [, setAr] = useState()
     const [inputs, setInputs] = useState({});
     const [validate, setValidate] = useState(false);
 
@@ -35,7 +35,7 @@ const Filter = () => {
 
     useEffect(()=>{
         setFilter(JSON.parse(localStorage.getItem('array')))
-    },[])
+    },[setFilter])
 
     return (
         <div className='menu-all flex'>

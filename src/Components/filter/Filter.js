@@ -6,7 +6,7 @@ import './filter.css'
 
 const Filter = () => {
 
-    const { array, setFilter  } = useContext(Api)
+    const { array, setFilter, setVal  } = useContext(Api)
     const [, setAr] = useState()
     const [inputs, setInputs] = useState({});
     const [validate, setValidate] = useState(false);
@@ -24,12 +24,14 @@ const Filter = () => {
 
     const filter = () => {
         if ((inputs.tipo || inputs.categoria) && (inputs.tipo !== '' || inputs.categoria !== '')) {
-            const ar = array.filter(item => item.tipo.includes(inputs.tipo) || item.categoria.includes(inputs.categoria))
+            const ar = array.filter(item => item.tipo.includes(inputs.tipo) || item.categoria === inputs.categoria)
             setAr(ar)
             localStorage.setItem('filter', JSON.stringify(ar))
             setFilter(JSON.parse(localStorage.getItem('filter')))
+            setVal(true)
         } else{
             setFilter(JSON.parse(localStorage.getItem('array')))
+            setVal(false)
         }
     }
 

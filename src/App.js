@@ -11,10 +11,11 @@ function App() {
   const json = JSON.parse(localStorage.getItem('array')) ? JSON.parse(localStorage.getItem('array')) : []
   const [filterAr, setFilter] = useState([])
   const [array, setArray] = useState(json)
+  const [val, setVal] = useState(false)
 
   return (
     <div>
-      <Api.Provider value={{ array, setArray, json, filterAr, setFilter}}>
+      <Api.Provider value={{ array, setArray, json, filterAr, setFilter, val, setVal }}>
         <Filter />
         <Table />
         <Create />

@@ -1,15 +1,17 @@
-import React, { useState, useContext, useEffect } from 'react'
+import React, { useState, useContext, useEffect, useReducer } from 'react'
 import { Api } from '../../Context/Api'
 import Input from '../input/Input'
+
 
 import './create.css'
 
 const Create = () => {
 
-    const { array, setArray } = useContext(Api)
+    const { array, setArray, filterAr, setFilter } = useContext(Api)
 
     const [turn, setTurn] = useState(false)
     const [inputs, setInputs] = useState({});
+    const [, forceUpdate] = useReducer((x) => x + 1, 0);
 
     const handleChange = ({ target }) => {
         const name = target.name
@@ -25,6 +27,7 @@ const Create = () => {
         event.preventDefault()
         setArray([...array, inputs])
         setInputs({ titulo: '', tipo: '', categoria: '', valor: '' })
+       forceUpdate() 
     }
 
     const change = () => {
@@ -33,7 +36,7 @@ const Create = () => {
 
     useEffect(() => {
         localStorage.setItem('array', JSON.stringify(array))
-    }, [array, setArray, turn])
+    }, [array, setArray, filterAr, setFilter])
 
     return (
         <div className='menu-all'>

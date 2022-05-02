@@ -5,7 +5,7 @@ import './table.css'
 
 const Table = () => {
 
-    const { setArray, json, filterAr } = useContext(Api)
+    const { array, setArray, json, filterAr, val } = useContext(Api)
     const [open, setOpen] = useState(false)
     const [index, setIndex] = useState('')
     const [inputs, setInputs] = useState({});
@@ -70,7 +70,20 @@ const Table = () => {
                         </tr>
                     </thead>
                     <tbody>
-                        {filterAr.map((item, index) => {
+                        {!val && array.map((item, index) => {
+                            return (
+                                <tr key={index}>
+                                    <td>{item.titulo}</td>
+                                    <td>{item.tipo}</td>
+                                    <td>{item.categoria}</td>
+                                    <td>R$ {item.valor}</td>
+                                    <td>{item.data}</td>
+                                    <td onClick={() => edit(index)} className='edit'>E</td>
+                                    <td onClick={() => remove(index)} className='erase'>X</td>
+                                </tr>
+                            )
+                        })}
+                        {val && filterAr.map((item, index) => {
                             return (
                                 <tr key={index}>
                                     <td>{item.titulo}</td>

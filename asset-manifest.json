@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/rrricardo00/rricardo00.github.io.git/static/css/main.1375aec3.css",
+    "main.js": "/rrricardo00/rricardo00.github.io.git/static/js/main.198d659d.js",
+    "static/js/787.0f3f5f7c.chunk.js": "/rrricardo00/rricardo00.github.io.git/static/js/787.0f3f5f7c.chunk.js",
+    "index.html": "/rrricardo00/rricardo00.github.io.git/index.html",
+    "main.1375aec3.css.map": "/rrricardo00/rricardo00.github.io.git/static/css/main.1375aec3.css.map",
+    "main.198d659d.js.map": "/rrricardo00/rricardo00.github.io.git/static/js/main.198d659d.js.map",
+    "787.0f3f5f7c.chunk.js.map": "/rrricardo00/rricardo00.github.io.git/static/js/787.0f3f5f7c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1375aec3.css",
+    "static/js/main.198d659d.js"
+  ]
+}
